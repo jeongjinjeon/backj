@@ -2,12 +2,12 @@ plugins {
 	id 'org.springframework.boot' version '2.6.2'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
-	id 'war'
 }
 
 group = 'com.jjjsins'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
+apply plugin: 'war'
 
 repositories {
 	mavenCentral()
@@ -18,6 +18,10 @@ dependencies {
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	compileOnly "org.springframework.boot:spring-boot-devtools"
+}
+
+bootWar {
+       archiveName("jjj.war")
 }
 
 test {
