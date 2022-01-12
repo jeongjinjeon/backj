@@ -21,7 +21,7 @@ dependencies {
 }
 
 bootWar {
-       archiveName("jjj.war")
+       archiveName("ROOT.war")
 }
 
 test {
